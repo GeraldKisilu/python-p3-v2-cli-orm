@@ -1,5 +1,13 @@
+# lib/helpers.py
+
 from models.department import Department
 from models.employee import Employee
+
+def list_departments():
+    departments = Department.query.all()  # Replace with your actual query method
+    for dept in departments:
+        print(f"Department ID: {dept.id}, Name: {dept.name}")
+
 
 
 def exit_program():
